@@ -1,10 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
+<title></title>
  <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/simple-sidebar.css" />
 </head>
 <body>
@@ -20,25 +21,13 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">Dashboard</a>
+                    <a href="<c:url value='/QnA/FAQView.jsp'/>">FAQ</a>
                 </li>
                 <li>
-                    <a href="#">Shortcuts</a>
+                    <a href="<c:url value='/qna/QnAList'/>">QnA</a>
                 </li>
                 <li>
-                    <a href="#">Overview</a>
-                </li>
-                <li>
-                    <a href="#">Events</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
+                    <a href="#">1:1문의</a>
                 </li>
             </ul>
         </div>
