@@ -63,11 +63,12 @@ public class MemberDAO {
 		System.out.println("05 updateMember 메서드 실행");
 			try{
 				conn = this.getConnection();
-				stmt = conn.prepareStatement("UPDATE member SET m_pw=?,m_name=?,m_phone=?,m_addr=?");
+				stmt = conn.prepareStatement("UPDATE member SET m_pw=?,m_name=?,m_phone=?,m_addr=? WHERE m_id=?");
 				stmt.setString(1, member.getM_pw());
 				stmt.setString(2, member.getM_name());
 				stmt.setString(3, member.getM_phone());
 				stmt.setString(4, member.getM_addr());
+				stmt.setString(5, member.getM_id());
 				memberCount = stmt.executeUpdate();
 			}catch(Exception e){
 				e.printStackTrace();

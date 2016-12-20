@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -12,21 +11,41 @@
 <br>
 <br>
 <br>
-<br>
-<br>
 <div class="container">
-	<form action="<c:url value='/MemberLogin'/>" method="post">
-		<table class="table" style="width:400px">
+	<form action="#" method="post">
+		<table class="table">
 			<tr>
-				<td>ID </td>
-				<td><input type="text" name="m_id" /></td>
+				<td>상품 번호</td>
+				<td>이미지</td>
+				<td>상품명</td>
+				<td>수량</td>
+				<td>판매가</td>
+				<td>적립금</td>
 			</tr>
 			<tr>
-				<td>PW </td>
-				<td><input type="password" name="m_pw" /></td>
+				<td>1</td>
+				<td>이미지</td>
+				<td>신발</td>
+				<td>1</td>
+				<td>30000</td>
+				<td>300</td>
 			</tr>
 		</table>
-		<input type="submit" value="로그인" />
-		<input type="reset" value="취소"/>
+		<br><br>
+		<br><br>
+		<table class="table" style="width:400px">
+			<tr>
+				<td>총 상품 금액</td>
+				<td>배송비</td>
+				<td>결제 금액</td>
+			</tr>
+			<tr>
+				<td>30000원</td>
+				<td>2500원</td>
+				<td>32500원</td>
+			</tr>
+		</table>
+		<input type="submit" value="주문하기">
+		<input type="button" onclick ="location.href='<c:url value='/OrderList'/>'" value="계속 쇼핑하기"/>
 	</form>
 </div>

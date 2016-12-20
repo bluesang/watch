@@ -38,6 +38,7 @@ public class MemberUpdate extends HttpServlet {
 		System.out.println("m_addr is " + m_addr);
 		
 		Member member = new Member();
+		member.setM_id(m_id);
 		member.setM_pw(m_pw);
 		member.setM_name(m_name);
 		member.setM_phone(m_phone);

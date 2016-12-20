@@ -36,7 +36,9 @@
                     <li>
                         <a href="<%= request.getContextPath()%>/QnA/QnAlist.jsp">고객센터</a>
                     </li>
-                    
+                    <li>
+                        <a href="<%= request.getContextPath()%>/Bucket/BucketList.jsp">장바구니</a>
+                    </li>
                 </ul>
                  <ul class="nav navbar-nav navbar-right">
                  	<% 
@@ -47,12 +49,18 @@
             			<li><br><%=SID%>님 환영합니다!!&nbsp;&nbsp;&nbsp;&nbsp;</li>	
               			<li><a href="<%= request.getContextPath()%>/MemberLogout"> 로그아웃</a></li>
                  	<%	
-            			}else{
+            			if(SLEVEL.equals("관리자")){
+            		%>
+            				<li><a href="<%= request.getContextPath()%>/MemberList"> 회원목록</a></li>
+            		<%		
+            			}
+            		
+            		}else{
             		%>	
             			<li><a href="<%= request.getContextPath()%>/MemberLogin"> 로그인</a></li>
 				        <li><a href="<%= request.getContextPath()%>/MemberAdd"> 회원가입</a></li>
             		<%
-            			}
+            		}
             		%>	
                  	
 				       
