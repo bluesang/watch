@@ -31,7 +31,6 @@
 
 <body>
     <%@ include file = "module/top.jsp" %>
-
  	<%@ include file = "module/carousel.jsp" %>
 	<%@ include file = "module/center.jsp" %>
         <!-- Footer -->

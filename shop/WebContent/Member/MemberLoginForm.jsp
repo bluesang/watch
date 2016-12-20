@@ -12,7 +12,7 @@
 <br>
 <br>
 <div class="container">
-	<form action="<c:url value='/MemberLogin'/>">
+	<form action="<c:url value='/MemberLogin'/>" method="post">
 		<table class="table" style="width:400px">
 			<tr>
 				<td>ID </td>

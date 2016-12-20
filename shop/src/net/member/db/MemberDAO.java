@@ -32,6 +32,32 @@ public class MemberDAO {
 		return memberCount;
 	}
 	
+	//회원 로그인 메서드
+	public Member loginMember(String m_id){
+		System.out.println("06 loginMember 메서드 실행");
+			try{
+				conn = this.getConnection();
+				stmt = conn.prepareStatement("SELECT m_pw,m_level FROM MEMBER WHERE m_id = ?");
+				stmt.setString(1, m_id);
+				rs = stmt.executeQuery();
+				if(rs.next()){
+					member = new Member();
+					member.setM_id(m_id);
+					member.setM_level(rs.getString("m_level"));
+					member.setM_pw(rs.getString("m_pw"));
+				}else{
+					//아이디없음
+					return null;
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}finally{
+				this.close(conn, stmt, rs);
+			}
+		System.out.println("----------- loginMember 메서드 완료------------");
+		return member;
+	}
+	
 	//회원 수정 메서드
 	public int updateMember(Member member){
 		System.out.println("05 updateMember 메서드 실행");
