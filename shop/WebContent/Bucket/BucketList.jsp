@@ -12,7 +12,7 @@
 <br>
 <br>
 <div class="container">
-	<form action="#" method="post">
+	<form action="/OrderGoods" method="post">
 		<table class="table">
 			<tr>
 				<td>상품 번호</td>
@@ -21,6 +21,7 @@
 				<td>수량</td>
 				<td>판매가</td>
 				<td>적립금</td>
+				<td></td>
 			</tr>
 			<tr>
 				<td>1</td>
@@ -29,6 +30,7 @@
 				<td>1</td>
 				<td>30000</td>
 				<td>300</td>
+				<td><input type="button" onclick ="location.href='<c:url value='/BucketDelete'/>'" value="삭제"/></td>
 			</tr>
 		</table>
 		<br><br>
